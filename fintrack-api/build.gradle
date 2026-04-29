@@ -1,0 +1,16 @@
+plugins {
+    id 'buildlogic.java-application-conventions'
+}
+
+application {
+    // İleride main class'ını oluşturduğunda paket adını buraya yazacaksın
+    mainClass = 'com.fintrack.api.FintrackApplication' 
+}
+
+dependencies {
+    // Diğer iki modüle de bağımlılık
+    implementation project(':fintrack-core')
+    implementation project(':fintrack-persistence')
+    
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
